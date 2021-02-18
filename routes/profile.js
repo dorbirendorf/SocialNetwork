@@ -33,12 +33,11 @@ router.get('/me',auth,async (req,res)=>{
 // @decription add a profile
 // @accsess    private
 router.post('/',[auth,[
-    check('status','status is required').not().isEmpty(),
+    //check('status','status is required').not().isEmpty(),
     check('skills','skills is requierd').not().isEmpty()
 ]],async (req,res)=>{
     const errors=validationResult(req)
     if(!errors.isEmpty()){
-        console.log('erros')
         res.status(400).json({errors:errors.array()})
     }
     // destructure req
