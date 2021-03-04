@@ -35,11 +35,11 @@ const CreateProfile = ({createProfile,history}) => {
         instagram
       } = formData;
     
-const [displaySocialInputs,toggleSocilaInputs]=useState(false)
+const [displaySocialInputs,toggleSocialInputs]=useState(false)
 
-const onChange= e=>
+const onChange= e=>{
     setFormData({...formData,[e.target.name]:e.target.value })
-
+}
 
 const onSubmit=(e)=>{
     e.preventDefault()
@@ -102,7 +102,7 @@ const onSubmit=(e)=>{
           <input
             type="text"
             placeholder="Github Username"
-            name=" githubusername"
+            name="githubusername"
             value={githubusername} 
             onChange={(e)=>onChange(e)}
           />
@@ -117,7 +117,7 @@ const onSubmit=(e)=>{
         </div>
 
         <div className="my-2">
-          <button onClick={()=>{toggleSocilaInputs(!displaySocialInputs)}} type="button" className="btn btn-light">
+          <button onClick={()=>{toggleSocialInputs(!displaySocialInputs)}} type="button" className="btn btn-light">
             Add Social Network Links
           </button>
           <span>Optional</span>

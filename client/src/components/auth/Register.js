@@ -30,9 +30,9 @@ import PropTypes from 'prop-types';
             props.register({name,email,password})
         }}
     //redirect if connected
-   // if(props.isAuthenticated){
-    //  return <Redirect to='/dashboard' />
-  //  }
+   if(props.isAuthenticated){
+     return <Redirect to='/dashboard' />
+   }
 
     return (
         <Fragment>

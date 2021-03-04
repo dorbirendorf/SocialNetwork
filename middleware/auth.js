@@ -10,7 +10,6 @@ module.exports=async function (req,res,next){
     try{
         decoded=jwt.verify(token,config.get('jwtSecret')) 
     req.user=await User.findById(decoded.user.id).select('-password')
-    console.log(`${req.user.name} has been authenicate`)
     next()
     }catch(err){
         res.status(401).json({msg:'token is not valid'})
