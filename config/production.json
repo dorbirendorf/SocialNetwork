@@ -1,0 +1,6 @@
+{
+    "mongoUri":"mongodb+srv://dorbiren:205444466dD@socialnetwork.nu0zp.mongodb.net/SocialNetwork?retryWrites=true&w=majority",
+    "jwtSecret":"iLoveBora",
+    "githubToken":"6a2526176a15b7031d4d0f8dfdb040153f29565c"
+
+}
