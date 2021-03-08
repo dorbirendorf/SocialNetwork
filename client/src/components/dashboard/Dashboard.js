@@ -17,7 +17,6 @@ const Dashboard = ({
     getCurrentProfile();
   }, [getCurrentProfile]);
 
-  console.log(profile)
 
   return (
     <Fragment>
@@ -51,7 +50,7 @@ const Dashboard = ({
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
-  deleteAccount: PropTypes.func.isRequired,
+  deleteAccount: PropTypes.func,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired
 };

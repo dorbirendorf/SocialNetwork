@@ -8,6 +8,9 @@ import ProfileTop from './ProfileTop'
 import ProfileAbout from './ProfileAbout'
 import ProfileExperience from './ProfileExperience'
 import ProfileEducation from './ProfileEducation'
+import ProfileGithub from './ProfileGithub'
+
+
 
 
 
@@ -20,7 +23,7 @@ const Profile =(
     }) => {
         useEffect(()=>{
             getProfileById(match.params.id)
-    },[getProfileById,match.params.id,profile])
+    },[getProfileById,match.params.id])
 
     return (
         <Fragment>
@@ -30,7 +33,7 @@ const Profile =(
                <Link to='/edit-profile' className='btn btn-dark'>Edit profile</Link>}
 
            
-           <div class="profile-grid my-1">
+           <div className="profile-grid my-1">
                <ProfileTop profile={profile}/>
                <ProfileAbout profile={profile}/>
 
@@ -65,6 +68,7 @@ const Profile =(
                 <h4>No education credentials</h4>
               )}
                 </div>
+                {profile.githubusername && (<ProfileGithub userName={profile.githubusername} />)}
 
            </div>
            </Fragment> } 
