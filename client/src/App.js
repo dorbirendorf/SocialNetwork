@@ -17,7 +17,9 @@ import NotFound from './components/layout/NotFound';
 import PrivateRoute from './components/routing/PrivateRoute';
 import EditProfile from './components/profile-forms/EditProfile'
 import CreateProfile from './components/profile-forms/CreateProfile'
-import Posts from './components/post/posts'
+import Posts from './components/posts/Posts'
+import Post from './components/post/Post'
+
 
 
 //Redux
@@ -52,6 +54,8 @@ const App=()=> {
         <PrivateRoute exact path="/add-experience" component={AddExperience} />
         <PrivateRoute exact path="/add-education" component={AddEducation} />
         <PrivateRoute exact path="/posts" component={Posts} />
+        <PrivateRoute exact path="/posts/:id" component={Post} />
+
 
         <Route component={NotFound} />
       </Switch>
