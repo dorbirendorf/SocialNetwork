@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import formatDate from '../../utils/formatDate';
+
 
 const ProfileExperience = (
     {experience:{title,company,location,current,to,from,description}},key) => {
