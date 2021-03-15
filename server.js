@@ -1,7 +1,12 @@
 const express=require('express')
-require('./config/db')   //runs DB
+const connectDB = require('./config/db');
 const app=express()
 const path=require('path') 
+
+
+// Connect Database
+connectDB();
+
 
 //routers
 const usersRouter=require('./routes/users')
@@ -12,9 +17,6 @@ const { appendFile } = require('fs')
 
 //use middelware
 app.use(express.json())
-
-
-
 
 app.use('/users',usersRouter)
 app.use('/posts',postsRouter)
