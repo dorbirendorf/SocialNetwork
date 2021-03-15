@@ -1,4 +1,3 @@
-import { post } from 'request'
 import {GET_POSTS, POST_ERROR,GET_POST, UPDATE_LIKES,DELETE_POST,ADD_POST,ADD_COMMENT,REMOVE_COMMENT} from '../actions/types'
 
 const initialState={
@@ -9,7 +8,7 @@ const initialState={
 
 }
 
-export default function(state=initialState,action){
+ function postReducer (state=initialState,action){
     const {type,payload}=action
 
     switch(type){
@@ -70,3 +69,4 @@ export default function(state=initialState,action){
             return state
     }
 }
+export default postReducer

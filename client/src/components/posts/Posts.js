@@ -1,7 +1,7 @@
 import React,{useEffect,Fragment} from 'react'
 import{connect} from 'react-redux'
 import Spinner from '../layout/Spinner'
-import {deletePost, getPosts} from '../../actions/post'
+import { getPosts} from '../../actions/post'
 import PropTypes from 'prop-types'
 import PostItem from './PostItem'
 import PostForm from './PostForm'
